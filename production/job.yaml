@@ -1,10 +1,10 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 code: .
-command: <MISSING> --trainingdata ${{ inputs.training_data }}
+command: python train.py --trainingdata ${{ inputs.training_data }}
 inputs:
   training_data:
-    <MISSING>
+    azureml:iris:1
 environment: azureml://registries/azureml/environments/sklearn-1.1/versions/14
-compute: <MISSING>
-experiment_name: <MISSING>
+compute: practica3-ml-compute
+experiment_name: iris-expriment
 description: Practical3 demo
